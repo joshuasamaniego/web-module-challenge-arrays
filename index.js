@@ -117,10 +117,10 @@ function removeFlavorByName(arr, flavor){
 }
 removeFlavorByName(originalFlavors, "Vanilla");
 
-// PLEASE EXPLAIN WHAT'S UP WITH listItems sentence!
+// PLEASE EXPLAIN WHAT'S UP WITH listItems sentence! ALSO, is this *wrong* because I didn't use .splice?
 
 
-/* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
+/*✅ Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
 Your function should accept: 
 
@@ -154,11 +154,17 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
+let filteredArray = [];
 
-    /*code here*/
-
-}
+function filterByWord(arr, str){
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].includes(str)) {
+            filteredArray.push(arr[i])
+        }
+    }// for loop
+}//function
+filterByWord(originalFlavors, 'Chocolate');
+console.log(filteredArray);
 
 
 
