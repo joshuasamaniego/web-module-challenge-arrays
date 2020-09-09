@@ -64,9 +64,9 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 
 function addFlavor(arr, flavor){
     arr.unshift(flavor);
-    console.log(arr);
+    return (arr);
 }
-addFlavor(originalFlavors, 'Rainbow Sherbert');
+console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* ✅Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
@@ -81,9 +81,9 @@ For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", 
 
 function removeLastFlavor(arr){
     arr.pop();
-    console.log(arr);
+    return (arr);
 }
-removeLastFlavor(originalFlavors);
+console.log(removeLastFlavor(originalFlavors));
 
 /* ✅Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -95,9 +95,9 @@ Your function should accept:
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
 function getFlavorByIndex(arr, index){
-    console.log(arr[index]);
+    return (arr[index]);
 }
-getFlavorByIndex(originalFlavors, 2);
+console.log(getFlavorByIndex(originalFlavors, 2));
 
 /* ✅ Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
@@ -113,9 +113,9 @@ Hint: You can use .splice() for this
 */
 
 function removeFlavorByName(arr, flavor){
-    console.log(arr = arr.filter(arrItems => arrItems !== flavor));
+    return (arr = arr.filter(arrItems => arrItems !== flavor));
 }
-removeFlavorByName(originalFlavors, "Vanilla");
+console.log(removeFlavorByName(originalFlavors, "Vanilla"));
 
 // PLEASE EXPLAIN WHAT'S UP WITH listItems sentence! ALSO, is this *wrong* because I didn't use .splice?
 
@@ -133,9 +133,9 @@ function copy(newArr, oldArr){
     oldArr.shift();
     oldArr.push('Vanilla Burnt Almond');
     newArr = [...oldArr];
-    console.log(newArr);
+    return (newArr);
 }
-copy(oldFlavors, originalFlavors);
+console.log(copy(oldFlavors, originalFlavors));
 
 // Is there a better way to do this?
 
@@ -154,17 +154,17 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-let filteredArray = [];
-
 function filterByWord(arr, str){
+    let filteredArray = [];
     for(let i = 0; i < arr.length; i++) {
         if(arr[i].includes(str)) {
             filteredArray.push(arr[i])
         }
     }// for loop
+    return (filteredArray);
 }//function
-filterByWord(originalFlavors, 'Chocolate');
-console.log(filteredArray);
+console.log(filterByWord(originalFlavors, 'Chocolate'));
+
 
 
 
